@@ -27,7 +27,6 @@ module.exports.clientLogin = async (req, res) => {
             res.send(token)
         }
         else {
-            
             res.send({msg:"verification not done"})
         }
     }

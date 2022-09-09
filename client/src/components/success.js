@@ -15,7 +15,7 @@ export default function SuccessCard() {
             <Card width="100%">
                 <CardContent sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                     <CheckCircleOutlineOutlined color="success" sx={{ fontSize: 48, textalign: "center" }} />
-                    <Typography sx={{ mt: 1.5 }} variant="h5" color="text.dark" gutterBottom>
+                    <Typography sx={{ mt: 1.5 }} variant="h5" color="green"  gutterBottom>
                         Password Changed Successfully
                     </Typography>
                 </CardContent>

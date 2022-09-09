@@ -65,7 +65,7 @@ export default function ResetForm() {
         <Box my={{ xs: "15%", md: "10%" }} mx={{ xs: 2, sm: "auto" }} width={{ sm: 500 }}>
             <Stack spacing={{ xs: 2 }}>
                 <Box sx={{ textAlign: "center" }}>
-                    <Typography variant="h5"> Reset Password  </Typography>
+                    <Typography variant="h4"> Reset Password  </Typography>
                 </Box>
                 <Box>
                     <Formik
