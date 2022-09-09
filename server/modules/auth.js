@@ -32,6 +32,7 @@ module.exports.clientLogin = async (req, res) => {
         }
     }
     catch (e) {
+        
         res.send(e)
     }
 

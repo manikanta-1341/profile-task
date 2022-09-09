@@ -31,7 +31,7 @@ export default function Login() {
 
 
             let response = await axios.put(`${backend_url}/login`, { ...values })
-            // console.log(response)
+            console.log(response)
             if (response.data.error) {
                 alert(response.data.error)
             }
@@ -42,6 +42,9 @@ export default function Login() {
 
                 let response = await axios.patch(`${backend_url}/verificationMail`, { email: values.email })
                 response.data.msg ? alert(response.data.msg) : alert(response.data.error)
+            }
+            else if(!response.data){
+                alert('Empty Response')
             }
             else {
                 window.sessionStorage.setItem('token', response.data)
