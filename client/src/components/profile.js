@@ -14,7 +14,7 @@ import { FETCH_CLIENT } from '../redux/actions/action'
 import { useDispatch, useSelector } from 'react-redux'
 import Navbar from './navbar'
 import { useNavigate } from 'react-router-dom'
-
+import { keyframes } from '@emotion/react'
 YupPassword(yup)
 
 
@@ -97,7 +97,18 @@ const Profile = () => {
         }
     }
 
-    // let leftAnimation = ""
+    let leftAnimation = keyframes({
+        from :{
+            opacity:0,
+            top:10,
+            left:0, 
+        },
+        to:{
+            opacity:1,
+            top:50,
+            left:20
+        }
+    })
     return (
         client_fetch_status === "pending" ?
             <Box
@@ -134,7 +145,7 @@ const Profile = () => {
                     {(props) => {
                         return (
                             <Form>
-                                <Grid container sx={{ width: { xs: "90%", sm: "80%", md: 500 }, mx: "auto" }} rowSpacing={{ xs: 2 }} >
+                                <Grid container sx={{ width: { xs: "90%", sm: "80%", md: 500 }, mx: "auto",animation:`${leftAnimation} 2s ease` }} rowSpacing={{ xs: 2 }} >
                                     <Grid item xs={12}>
 
                                         <TextField
