@@ -126,13 +126,13 @@ module.exports.ForgetPasswordVerify = async (req, res, next) => {
 }
 
 
-module.exports.savePassword = async (req, res, next) => {
+module.exports.savePassword = async (req, res) => {
 
     try {
         const string = await bcrypt.genSalt(6)
         const hashPassword = await bcrypt.hash(req.body.password, string)
-
-        await Client.findOneAndUpdate({ _id: mongoose.Types.ObjectId(req.params.id) }, { $set: { password: hashPassword }, $set: { randomString: '' } })
+        // console.log(req.body.password,hashPassword,req.params.id)
+        await Client.findOneAndUpdate({ _id: mongoose.Types.ObjectId(req.params.id) }, { $set: { password: hashPassword , randomString: '' } })
         res.send({ msg: "saved successfully" })
     }
     catch (err) {
