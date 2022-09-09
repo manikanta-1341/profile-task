@@ -1,9 +1,9 @@
 body {
   margin: 0;
-  /* height:100vh; */
   background:url("https://wallpaperaccess.com/full/16692.jpg");
   background-position:center;
-  /* display:flex;
-  align-items:center;
-  justify-content:center; */
+}
+::-webkit-calendar-picker-indicator {
+  background-color: #218e26;
+  padding: 5px;
 }
