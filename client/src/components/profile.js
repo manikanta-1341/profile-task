@@ -155,7 +155,7 @@ const Profile = () => {
                                             value={props.values.age}
                                             onChange={props.handleChange}
                                             onBlur={props.handleBlur}
-                                            placeholder="Age"
+                                            // placeholder="Age"
                                             error={props.touched.age && props.errors.age && true}
                                         />
                                         <Typography sx={{ color: "red" }}>
@@ -166,7 +166,7 @@ const Profile = () => {
 
                                         <TextField
                                             fullWidth
-                                            label="Date Of Birth"
+                                            // label="Date Of Birth"
                                             type="date"
                                             name="dob"
                                             value={props.values.dob}
@@ -187,7 +187,7 @@ const Profile = () => {
                                             value={props.values.mobile}
                                             onChange={props.handleChange}
                                             onBlur={props.handleBlur}
-                                            placeholder="Phone Number"
+                                            // placeholder="Phone Number"
                                             error={props.touched.mobile && props.errors.mobile && true}
                                         />
                                         <Typography sx={{ color: "red" }}>
@@ -203,7 +203,7 @@ const Profile = () => {
                                             value={props.values.country}
                                             onChange={props.handleChange}
                                             onBlur={props.handleBlur}
-                                            placeholder="Country"
+                                            // placeholder="Country"
                                             error={props.touched.country && props.errors.country && true}
                                         />
                                         <Typography sx={{ color: "red" }}>
