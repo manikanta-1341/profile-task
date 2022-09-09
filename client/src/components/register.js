@@ -45,7 +45,7 @@ export default function Register() {
         try {
             let client_values = values
             delete client_values.conf_password;
-            let response =  await axios.post(`${backend_url}/client/create`, {
+            let response =  await axios.post(`${backend_url}/create`, {
                 client: client_values
             }) 
             response.data.msg ?  alert(response.data.msg) : alert(response.data.error)
@@ -53,7 +53,7 @@ export default function Register() {
             response.data.msg && nav('/')
         }
         catch (e) {
-            
+            console.log(e)
             alert('Submission failed')
         }
     }

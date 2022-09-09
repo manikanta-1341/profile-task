@@ -31,6 +31,7 @@ export default function Login() {
 
 
             let response = await axios.put(`${backend_url}/login`, { ...values })
+            console.log(response)
             if (response.data.error) {
                 alert(response.data.error)
             }
